@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
 import requests
 import sys
 
@@ -30,4 +30,4 @@ for letter in letters:
 
 letters_tupple = [(letter, letters[letter]) for letter in letters]
 for letter, count in sorted(letters_tupple, key=lambda a: a[1]):
-    print("%3s%8d%8.2f%%" % (letter, count, 100.0*count/sum))
+    print("%3s%8d%8.2f%%" % (letter, count, 0 if sum == 0 else 100.0*count/sum))
